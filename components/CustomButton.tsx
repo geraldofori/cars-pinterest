@@ -5,12 +5,13 @@ const CustomButton = ({
   title,
   containerStyles,
   handleClick,
+  btnType
 }: CustomButtonProps) => {
   return (
     <button
       disabled={false}
       className={`custom-btn ${containerStyles}`}
-      type={`button`}
+      type={btnType ||`button`}
       onClick={() => {
         handleClick;
       }}
