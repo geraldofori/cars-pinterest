@@ -3,8 +3,6 @@ import { getCars } from "@/utils";
 
 export default async function Home() {
   const allCars = await getCars();
-  console.log("all cars", allCars);
-
   const isEmpty = allCars.length < 1 || !Array.isArray(allCars) || !allCars;
   return (
     <main className="overflow-hidden">
